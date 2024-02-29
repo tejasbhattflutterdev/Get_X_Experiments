@@ -1,4 +1,5 @@
-import 'package:exp_fist/simple_state_manager/ex_simple_state_manager.dart';
+import 'package:exp_fist/api_handling/module/views/product_view.dart';
+import 'package:exp_fist/bindings/main_bindings/all_controller_bindings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,11 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+        initialBinding: AllBindings(),
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: SimpleStateManageEXP());
+        home: ProductListData());
   }
 }
